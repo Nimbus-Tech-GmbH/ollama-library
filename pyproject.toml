@@ -1,0 +1,31 @@
+[project]
+name = "ollama-library"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Rohit Khanduri",email = "rohit.khanduri@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.117.1,<0.118.0)",
+    "uvicorn (>=0.37.0,<0.38.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "beautifulsoup4 (>=4.13.5,<5.0.0)",
+    "pydantic (>=2.11.9,<3.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+[tool.poetry]
+packages = [{include = "ollama_library", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest-cov (>=7.0.0,<8.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+]
