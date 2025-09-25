@@ -37,7 +37,7 @@ Quickly surface and search model metadata from Ollama’s public library as an A
 
 4. **Access the API:**
     - Visit [http://localhost:8000/scrape?url=https://ollama.ai/library](http://localhost:8000/scrape?url=https://ollama.ai/library) for the JSON response
-    - Open [http://localhost:8000/docs](http://localhost:8000/docs) for interactive Swagger documentation - Coming Soon
+    - Open [http://localhost:8000/docs](http://localhost:8000/docs) for interactive Swagger documentation
 
 ## Example Output
 
