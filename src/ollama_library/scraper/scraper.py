@@ -7,7 +7,7 @@ from ollama_library.exceptions.scraper import (
 )
 
 
-def scrape_and_transform(url: str):
+def scrape_and_transform(url: str) -> list[dict[str, str]]:
     try:
         response = requests.get(url)
         response.raise_for_status()
