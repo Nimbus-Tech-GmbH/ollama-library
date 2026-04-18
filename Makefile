@@ -1,4 +1,4 @@
-.PHONY: dev prod test lint format clean
+.PHONY: dev prod test lint format clean export-models
 
 dev:
 	poetry run uvicorn ollama_library.main:app --reload
@@ -21,3 +21,10 @@ format:
 clean:
 	find . -type d -name '__pycache__' -exec rm -rf {} +
 	find . -type d -name '.pytest_cache' -exec rm -rf {} +
+
+## export-models: Scrape Ollama library and save to JSON
+## Usage: make export-models
+##        make export-models OUTPUT=/custom/path/models.json
+export-models:
+	@chmod +x cli/fetch-ollama-models.sh
+	@bash cli/fetch-ollama-models.sh $(if $(OUTPUT),--output $(OUTPUT),)
